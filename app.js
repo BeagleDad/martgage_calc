@@ -56,14 +56,36 @@ window.onload = function() {
     let principleAndInterest =
       ((interestRate / 100 / 12) * loanAmount) /
       (1 - Math.pow(1 + interestRate / 100 / 12, -yearsOfMortgage * 12));
-    console.log(principleAndInterest);
+    //console.log(principleAndInterest);
+    return principleAndInterest;
+  };
+
+  const calcMonthlyTax = annTax => {
+    return annTax / 12;
+  };
+
+  const calcMonthlyInsurance = annInsurance => {
+    return annInsurance / 12;
   };
 
   // Handle submit
   const handleSubmit = e => {
     e.preventDefault();
     // Do the calculations
-    calcPrincipleAndInterest();
+    const principleAndInterest = calcPrincipleAndInterest();
+    const monthlyTax = calcMonthlyTax(annualTax);
+    const monthlyInsurance = calcMonthlyInsurance(annualInsurance);
+    const monthlyPayment = principleAndInterest + monthlyTax + monthlyInsurance;
+    console.log(
+      "pni: " +
+        principleAndInterest +
+        " tax: " +
+        monthlyTax +
+        " insurance: " +
+        monthlyInsurance +
+        " monthly payment: " +
+        monthlyPayment
+    );
   };
   document.getElementById("the-form").addEventListener("submit", handleSubmit);
 };
