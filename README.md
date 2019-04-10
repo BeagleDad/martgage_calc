@@ -1,2 +1,2 @@
-# martgage_calc
+# mortgage_calc
 Mortgage Calculator done for coding test for ConsumerAffairs
