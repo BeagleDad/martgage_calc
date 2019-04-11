@@ -1,3 +1,7 @@
+body {
+  margin: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .Rectangle-35 {
   width: 300px;
   height: 431px;
@@ -6,10 +10,46 @@
   box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
 }
-
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+.title {
+  grid-column: 1/-1;
+  font-size: 22px;
+  padding: 2px;
+  border-bottom: 1px solid #9e99a3;
+}
+.user-prompt {
+  grid-column: 1/-1;
+  grid-row: 1;
+  padding: 2px;
+  border-bottom: 1px solid #9e99a3;
+}
+#the-form {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 1fr;
+  border: 2px solid pink;
+}
+#year-heading {
+  grid-column: 1/-1;
+  grid-row: 2;
+}
+#year-slider {
+  grid-column: 1;
+  grid-row: 2;
+  justify-content: stretch;
+  /* border: 2px solid #000000; */
+}
+#year-value {
+  grid-column: 2;
+  grid-row: 2;
+}
 .slider {
   -webkit-appearance: none;
-  width: 50%;
+  width: 300px;
   height: 15px;
   border-radius: 5px;
   background: #1091cc;
@@ -62,67 +102,4 @@
   width: 298px;
   height: 440px;
   background-color: #eaf6fa;
-}
-
-.stretchRight {
-  animation-name: stretchRight;
-  -webkit-animation-name: stretchRight;
-
-  animation-duration: 1.5s;
-  -webkit-animation-duration: 1.5s;
-
-  animation-timing-function: ease-out;
-  -webkit-animation-timing-function: ease-out;
-
-  transform-origin: 0% 0%;
-  -ms-transform-origin: 0% 0%;
-  -webkit-transform-origin: 0% 0%;
-}
-
-@keyframes stretchRight {
-  0% {
-    transform: scaleX(0.3);
-  }
-  40% {
-    transform: scaleX(1.02);
-  }
-  60% {
-    transform: scaleX(0.98);
-  }
-  80% {
-    transform: scaleX(1.01);
-  }
-  100% {
-    transform: scaleX(0.98);
-  }
-  80% {
-    transform: scaleX(1.01);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
-
-@-webkit-keyframes stretchRight {
-  0% {
-    -webkit-transform: scaleX(0.3);
-  }
-  40% {
-    -webkit-transform: scaleX(1.02);
-  }
-  60% {
-    -webkit-transform: scaleX(0.98);
-  }
-  80% {
-    -webkit-transform: scaleX(1.01);
-  }
-  100% {
-    -webkit-transform: scaleX(0.98);
-  }
-  80% {
-    -webkit-transform: scaleX(1.01);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-  }
 }

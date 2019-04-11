@@ -14,7 +14,7 @@ window.onload = function() {
   const yearSlide = document.getElementById("year-slide");
   yearSlide.value = yearsOfMortgage;
   document.getElementById("year-value").innerText = yearsOfMortgage;
-  yearSlide.addEventListener("change", updateSlider);
+  yearSlide.addEventListener("input", updateSlider);
 
   // Setup rate slider
   const updateRateSlider = e => {
@@ -24,7 +24,7 @@ window.onload = function() {
   const rateSlide = document.getElementById("rate-slide");
   rateSlide.value = interestRate;
   document.getElementById("rate-value").innerText = interestRate;
-  rateSlide.addEventListener("change", updateRateSlider);
+  rateSlide.addEventListener("input", updateRateSlider);
 
   // Setup loan input
   const updateLoanAmt = e => {
@@ -78,13 +78,13 @@ window.onload = function() {
     const monthlyPayment = principleAndInterest + monthlyTax + monthlyInsurance;
     console.log(
       "pni: " +
-        principleAndInterest +
+        principleAndInterest.toFixed(2) +
         " tax: " +
-        monthlyTax +
+        monthlyTax.toFixed(2) +
         " insurance: " +
-        monthlyInsurance +
+        monthlyInsurance.toFixed(2) +
         " monthly payment: " +
-        monthlyPayment
+        monthlyPayment.toFixed(2)
     );
   };
   document.getElementById("the-form").addEventListener("submit", handleSubmit);
