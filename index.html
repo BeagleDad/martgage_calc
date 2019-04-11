@@ -15,21 +15,25 @@
         <div class="user-prompt">Change values to calculate your results</div>
 
         <div class="section-heading" id="year-heading">Years of mortgage</div>
-        <div id="year-slider">
-          1
-          <input
-            class="slider"
-            id="year-slide"
-            type="range"
-            min="1"
-            max="40"
-            step="1"
-          />
-          40
+        <div class="slider-block">
+          <div id="year-slider">
+            1
+            <input
+              class="slider"
+              id="year-slide"
+              type="range"
+              min="1"
+              max="40"
+              step="1"
+            />
+            40
+          </div>
         </div>
         <div id="year-value" class="slider-value"></div>
 
-        <div class="section-heading">Rate of interest (%)</div>
+        <div class="section-heading" id="rate-heading">
+          Rate of interest (%)
+        </div>
         <div id="rate-slider">
           0.1
           <input
@@ -42,21 +46,27 @@
             value="8.0"
           />
           10
-          <div id="rate-value" class="slider-value">30</div>
         </div>
-        <div class="section">
-          <div class="section-heading">Loan Amount</div>
-          <input id="loan-input" type="text" class="input loan-input" />
-        </div>
+        <div id="rate-value" class="slider-value"></div>
+
+        <div class="section-heading" id="loan-heading">Loan Amount</div>
+        <input
+          id="loan-input"
+          type="text"
+          class="input loan-input"
+          placeholder="$"
+        />
+
         <div class="section">
           <div class="section-heading">Annual Tax</div>
           <input id="tax-input" type="text" class="input" />
         </div>
+        <!--
         <div class="section">
           <div class="section-heading">Annual Insurance</div>
           <input id="insurance-input" type="text" class="input" />
         </div>
-        <input type="submit" id="submit-btn" value="Calculate" />
+        <input type="submit" id="submit-btn" value="Calculate" /> -->
       </form>
     </div>
     <div class="results-wrapper"></div>

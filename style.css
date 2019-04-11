@@ -2,50 +2,51 @@ body {
   margin: 40px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.Rectangle-35 {
+/* .Rectangle-35 {
   width: 300px;
   height: 431px;
   object-fit: contain;
   border-radius: 4px;
   box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
-}
+} */
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
+  grid-template-columns: repeat(1fr 1fr);
 }
 .title {
-  grid-column: 1/-1;
+  grid-column: 1;
   font-size: 22px;
   padding: 2px;
   border-bottom: 1px solid #9e99a3;
 }
 .user-prompt {
-  grid-column: 1/-1;
+  grid-column: 1/3;
   grid-row: 1;
   padding: 2px;
   border-bottom: 1px solid #9e99a3;
 }
 #the-form {
   display: grid;
-  width: 100%;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr 60px 1fr 1fr 1fr 1fr;
   border: 2px solid pink;
 }
 #year-heading {
-  grid-column: 1/-1;
+  grid-column: 1/3;
   grid-row: 2;
 }
-#year-slider {
-  grid-column: 1;
-  grid-row: 2;
-  justify-content: stretch;
-  /* border: 2px solid #000000; */
+.slider-block {
+  grid-column: 1/3;
+  grid-row: 3;
+  align-self: center;
+  justify-self: left;
+
+  /* background-color: grey; */
 }
+
 #year-value {
-  grid-column: 2;
-  grid-row: 2;
+  grid-column: 3;
+  grid-row: 3;
 }
 .slider {
   -webkit-appearance: none;
@@ -77,6 +78,22 @@ body {
   background-color: #ffffff;
 }
 
+#rate-heading {
+  grid-column: 1/3;
+  grid-row: 4;
+}
+#rate-slider {
+  grid-column: 1/3;
+  grid-row: 5;
+  align-self: center;
+  justify-self: left;
+
+  /* background-color: grey; */
+}
+#rate-value {
+  grid-column: 3;
+  grid-row: 5;
+}
 .input {
   height: 40px;
   border-radius: 4px;
@@ -84,14 +101,25 @@ body {
   border: solid 1px #3e3d3f;
   background-color: #ffffff;
 }
-.loan-input {
-  width: 260px;
+#loan-heading {
+  grid-column: 1;
+  grid-row: 6;
+}
+#loan-input {
+  grid-column: 1/3;
+  grid-row: 7;
+  width: 390px;
 }
 
 #submit-btn {
-  width: 260px;
+  grid-column: 1/3;
+  grid-row: 6;
+  width: 440px;
   height: 40px;
   border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25em;
   background-color: #0077c0;
 }
 .results-wrapper {
